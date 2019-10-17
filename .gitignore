@@ -1,0 +1,4 @@
+.idea
+env/*
+ModelTraining/.ipynb_checkpoints
+ModelTraining/data/*
