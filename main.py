@@ -19,8 +19,9 @@ def load__model():
     """
     print('[INFO] Model Loading ........')
     global model
-    model = load_model(MODEL_FOLDER + 'tf2.h5')
+    model = load_model(MODEL_FOLDER + 'best_model.h5')
     print('[INFO] : Model loaded')
+
 
 def predict(fullpath):
     data = image.load_img(fullpath, target_size=(150, 150, 3))
@@ -29,9 +30,7 @@ def predict(fullpath):
     # Scaling
     data = data.astype('float') / 255
 
-    # Prediction
-
-    #with graph.as_default():
+    # Prediction:
     result = model.predict(data)
 
     return result
